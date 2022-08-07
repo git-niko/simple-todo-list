@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet" />
+        <script src="scripts.js" defer></script>
+        <title>Create a To Do List</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>To Do List</h1>
+                <section>
+                    <h2 class="sr-only">Enter New Item</h2>
+                    <label class="sr-only" for="new-item">Enter a list item</label>
+                    <input type="text" name="new-item" id="new-item" placeholder="Enter a list item..." />
+                    <button id="add-new">add new item</button>
+                    <p class="hidden err-msg"></p>
+                </section>
+            </header>
+            <section>
+                <h2 class="sr-only">Topic and Items</h2>
+                <ul></ul>
+            </section>
+        </div>
+    </body>
+</html>
