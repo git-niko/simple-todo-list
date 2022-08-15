@@ -1,8 +1,5 @@
 "use strict";
 
-let items;
-let btn;
-
 // *************** Add List Item *************** 
 function addListItem() {
 
@@ -24,7 +21,6 @@ function addListItem() {
         userInput.value = "";
         userInput.focus();
         errMsg.classList.remove("error");
-        addEventToListItems(items);
     }
 }
 
@@ -38,14 +34,5 @@ function removeListItem(event) {
 }
 
 // *************** Event Listeners *************** 
-btn = document.getElementById("add-new").addEventListener("click", addListItem);
-
-function addEventToListItems(items) {
-    items = document.querySelectorAll("li");
-
-    if (items.length !== 0) {
-        for (let item of items) {
-            item.addEventListener("click", removeListItem);
-        }
-    }
-}
+document.getElementById("add-new").addEventListener("click", addListItem);
+document.querySelector("ul").addEventListener("click", removeListItem);
